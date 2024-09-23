@@ -25,7 +25,10 @@ services:
     depends_on:
       - mongo 
 
-
+networks:
+  mern-networks:
+    driver: bridge
+    
   mongo:
     image: mongo
     volumes:
