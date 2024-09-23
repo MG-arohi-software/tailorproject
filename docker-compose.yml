@@ -25,18 +25,6 @@ services:
     depends_on:
       - mongo 
 
-  mongo:
-    image: mongo
-    volumes:
-      - data-volume:/data/db
-    ports:
-      - "27017:27017"
-    networks:
-      - mern-networks
-
 networks:
   mern-networks:
-    driver: bridge  
-
-volumes:
-  data-volume:  # Define the data-volume here
+    driver: bridge
