@@ -36,4 +36,6 @@ services:
 
 networks:
   mern-networks:
-    driver: bridge      
+    driver: bridge  
+  app-network:
+    driver: bridge    
