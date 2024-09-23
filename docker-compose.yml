@@ -18,7 +18,7 @@ services:
       context: ./backend
       dockerfile : Dockerfile.prod
     ports:
-      -5555:5555
+      - 5555:5555
     container_name: backend-container
     networks:
       - mern-networks
