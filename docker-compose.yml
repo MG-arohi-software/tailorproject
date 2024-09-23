@@ -24,10 +24,6 @@ services:
       - mern-networks
     depends_on:
       - mongo 
-
-networks:
-  mern-networks:
-    driver: bridge
     
   mongo:
     image: mongo
@@ -37,3 +33,7 @@ networks:
       - "27017:27017"
     networks:
       - app-network
+
+networks:
+  mern-networks:
+    driver: bridge      
