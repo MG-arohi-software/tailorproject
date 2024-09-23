@@ -16,7 +16,7 @@ services:
   backend:
     build: 
       context: ./backend
-      dockerfile : Dockerfile.prod
+      dockerfile: Dockerfile.prod
     ports:
       - 5555:5555
     container_name: backend-container
@@ -24,7 +24,7 @@ services:
       - mern-networks
     depends_on:
       - mongo 
-    
+
   mongo:
     image: mongo
     volumes:
@@ -32,10 +32,11 @@ services:
     ports:
       - "27017:27017"
     networks:
-      - app-network
+      - mern-networks
 
 networks:
   mern-networks:
     driver: bridge  
-  app-network:
-    driver: bridge    
+
+volumes:
+  data-volume:  # Define the data-volume here
